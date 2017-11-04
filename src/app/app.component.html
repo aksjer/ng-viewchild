@@ -1,0 +1,13 @@
+<p *ngFor="let u of users | async" appColor>
+  <app-card [text]="u.name">
+    <h3 #inside>h3 ; {{u.id}}</h3>
+  </app-card>
+</p>
+
+<input type="text" #filter>
+
+<app-tabs>
+  <div>last ?</div>
+  <div ts>attribute ts</div>
+  <app-tab class="ts" *ngFor="let t of tabs" [text]="t"></app-tab>
+</app-tabs>
