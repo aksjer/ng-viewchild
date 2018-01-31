@@ -11,3 +11,10 @@
   <div ts>attribute ts</div>
   <app-tab class="ts" *ngFor="let t of tabs" [text]="t"></app-tab>
 </app-tabs>
+
+<ng-template #temp let-toto let-hehe let-col="col">
+  <div>toto : {{toto}}</div>
+  <div>hehe : {{hehe}}</div>
+  <div>col : {{col}}</div>
+</ng-template>
+<ng-container *ngTemplateOutlet="temp; context : { $implicit: 'you can\'t move', col : 'hehe , this is col variable'}"></ng-container>
